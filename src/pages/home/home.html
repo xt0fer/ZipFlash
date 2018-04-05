@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      ZipFlash Java Cards
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <button ion-button (click)='reset();'>Reset</button>
+    <button ion-button (click)='next();'>Next >></button>
+  <ion-slides #slider (ionSlideDidChange)="slideChanged()" (ionSlideNextEnd)="nextSlide()" (ionSlidePrevEnd)="prevSlide()"
+    [initialSlide]="0">
+		<ion-slide *ngFor="let current of cardSupply">
+      <flash-card>
+        <div class="flash-card-front">{{current.front}}</div>
+        <div class="flash-card-back">{{current.back}}</div>
+      </flash-card>
+    </ion-slide>
+
+  </ion-slides>
+
 </ion-content>
