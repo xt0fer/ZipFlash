@@ -21,31 +21,18 @@ export class FlashCardsProvider {
   httpCl: HttpClient;
   public _robotOverlords: any[] = [];
   constructor(public http: HttpClient) {
-    console.log('Hello FlashCardsProvider Provider');
+    console.log('FlashCardsProvider Provider');
     this.httpCl = http;
     this.getData();
   }
   getData() {
     return this.httpCl.get('assets/data/javacards.txt').subscribe(data => {
-      // var stringifiedData = JSON.stringify(data);
-      // //var parsedData: any[] = JSON.parse(stringifiedData);
-      // this.defaultCards = JSON.parse(stringifiedData);
       for (var key in data) {
         this.defaultCards.push(data[key]);
       }
       });
   }
 
-
-  // load() {
-  //   console.log('load json called');
-  //   return new Promise(resolve => {
-  //     this.http.get('assets/data/javacards.json').map(response => {
-  //       this.data = response.json();
-  //       resolve(this.data);
-  //     });
-  //   });
-  // }
   cardFor(cardindex) {
     this.idx = cardindex % this.defaultCards.length;
     return this.defaultCards[this.idx];
@@ -66,15 +53,15 @@ export class FlashCardsProvider {
       },
       {
         front: "Card2",
-        back: "Asshole!"
+        back: "Wow!"
       },
       {
         front: "Card3",
-        back: "Asshole!"
+        back: "Nothing!"
       },
       {
         front: "Card4",
-        back: "Asshole!"
+        back: "Never Mind!"
       },
       {
         front: "Card5",

@@ -16,7 +16,7 @@
             "back": "A collection of graphical user interface (GUI) components that were implemented using native-platform versions of the components. These components provide that subset of functionality which is common to all native platforms. Largely supplanted by the Project Swing component set. See also Swing ."
         },
         {
-            "front": "access control´",
+            "front": "access control",
             "back": "The methods by which interactions with resources are limited to collections of users or programs for the purpose of enforcing integrity, confidentiality, or availability constraints."
         },
         {
