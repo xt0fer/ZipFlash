@@ -31,15 +31,15 @@ export class HomePage {
   }
 
   nextSlide() {
-     // ready for more functionality
+    // ready for more functionality
   }
 
   prevSlide() {
-     // ready for more functionality
+    // ready for more functionality
   }
 
   reset() {
-    this.slides.slideTo(0, 500);
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
   next() {
     let idx = this.slides.getActiveIndex() + 1;

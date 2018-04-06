@@ -17,7 +17,9 @@ export class FlashCardComponent {
   constructor() {
  
   }
- 
+  reset() {
+    this.flipped = false;
+  }
   flip(){
     this.flipped = !this.flipped;
   }

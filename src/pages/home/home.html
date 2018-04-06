@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content>
-    <button ion-button (click)='reset();'>Reset</button>
-    <button ion-button (click)='next();'>Next >></button>
-  <ion-slides #slider (ionSlideDidChange)="slideChanged()" (ionSlideNextEnd)="nextSlide()" (ionSlidePrevEnd)="prevSlide()"
+    <button ion-button color="secondary" (click)='reset();'>Reset</button>
+    <button ion-button color="secondary" (click)='next();'>Next >></button>
+  <ion-slides #slides *ngIf="cardSupply && cardSupply.length" (ionSlideDidChange)="slideChanged()" (ionSlideNextEnd)="nextSlide()" (ionSlidePrevEnd)="prevSlide()"
     [initialSlide]="0">
 		<ion-slide *ngFor="let current of cardSupply">
       <flash-card>
