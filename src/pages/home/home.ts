@@ -45,4 +45,11 @@ export class HomePage {
     let idx = this.slides.getActiveIndex() + 1;
     this.slides.slideTo(idx, 500);
   }
+
+  randomize() {
+    this.cardSupply = this.prov.randomCards();
+
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
+
+  }
 }
